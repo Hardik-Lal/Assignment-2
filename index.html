@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Energy Consumption Prediction</h1>
+    <form method="POST">
+        <label>Relative Compactness: <input type="text" name="Relative_Compactness" required></label><br>
+        <label>Surface Area: <input type="text" name="Surface_Area" required></label><br>
+        <label>Wall Area: <input type="text" name="Wall_Area" required></label><br>
+        <label>Roof Area: <input type="text" name="Roof_Area" required></label><br>
+        <label>Overall Height: <input type="text" name="Overall_Height" required></label><br>
+        <label>Orientation: <input type="text" name="Orientation" required></label><br>
+        <label>Glazing Area: <input type="text" name="Glazing_Area" required></label><br>
+        <label>Glazing Area Distribution: <input type="text" name="Glazing_Area_Distribution" required></label><br>
+        <button type="submit">Predict</button>
+    </form>
+    
+    {% if prediction %}
+        <h2>Predicted Heating Load: {{ prediction }} MWh</h2>
+    {% elif error %}
+        <h2>{{ error }}</h2>
+    {% endif %}
+</body>
+</html>
