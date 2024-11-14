@@ -1,2 +1,2 @@
 # Assignment-2
-Dear Sir, I made an App
+This repo consists an app which predicts energy consumption using the trained ML Model
